@@ -1,0 +1,131 @@
+/* =========================
+   Base page styling
+========================= */
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd1dc, #ff9eb5);
+  font-family: 'Baloo 2', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* =========================
+   Confetti background
+========================= */
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.confetti::before {
+  content: "💖 ✨ 💕 ✨ 💗 💕 ✨ 💖";
+  position: absolute;
+  inset: 0;
+  font-size: 2rem;
+  animation: confettiFall 12s linear infinite;
+  opacity: 0.6;
+}
+
+/* =========================
+   Main card container
+========================= */
+
+.container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 35px 40px;
+  text-align: center;
+  border: 2px solid rgba(231, 84, 128, 0.35);
+  box-shadow:
+    0 20px 40px rgba(231, 84, 128, 0.35),
+    0 0 25px rgba(255, 182, 193, 0.4);
+}
+
+/* =========================
+   Heading
+========================= */
+
+h1 {
+  margin: 0 0 20px;
+  color: #e75480;
+  font-size: 2.6em;
+}
+
+/* =========================
+   GIF styling
+========================= */
+
+.gif_container img {
+  width: 280px;
+  max-width: 80vw;
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
+.wiggle {
+  animation: wiggle 2.5s infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.bob {
+  animation: bob 3s infinite;
+}
+
+@keyframes confettiFall {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+/* =========================
+   Mobile adjustments
+========================= */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.1em;
+  }
+
+  .container {
+    padding: 28px 24px;
+  }
+}
