@@ -129,3 +129,22 @@ h1 {
     padding: 28px 24px;
   }
 }
+
+.continue-button {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #ff7aa2, #e75480);
+  color: white;
+  font-size: 1.2em;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(231, 84, 128, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.continue-button:hover {
+  transform: scale(1.1);
+}
+
+
