@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd1dc, #ff9eb5);
+  font-family: 'Baloo 2', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Lock screen */
+.lock-screen {
+  text-align: center;
+  background: rgba(255,255,255,0.6);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(231,84,128,0.4);
+}
+
+.lock-screen input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.lock-screen button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #e75480;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+/* Content */
+.hidden {
+  display: none;
+}
+
+.content {
+  position: relative;
+}
+
+.container {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(231,84,128,0.35);
+}
+
+h1 {
+  color: #e75480;
+}
+
+/* Letter icon */
+.letter-icon {
+  font-size: 3em;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: wiggle 2s infinite;
+}
+
+/* Letter popup */
+.letter-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-card {
+  background: #fff0f5;
+  padding: 25px;
+  border-radius: 25px;
+  width: 85%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes wiggle {
+  0%,100% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes bob {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.bob {
+  animation: bob 3s infinite;
+}
+
+@keyframes bounceIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.bounce-in {
+  animation: bounceIn 0.8s ease-out;
+}
+
+.propose-subtext {
+  margin-top: 8px;
+  font-size: 1.2em;
+  color: #e75480;
+  opacity: 0.9;
+}
+
+.propose-subtext {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 0.9; transform: translateY(0); }
+}
