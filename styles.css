@@ -56,3 +56,22 @@ body {
     border-radius: 10px;
     margin-top: 20px;
   }
+
+.continue-btn {
+  display: none;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #ff9eb5, #e75480);
+  color: white;
+  font-size: 1.1em;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(231, 84, 128, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.continue-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 26px rgba(231, 84, 128, 0.75);
+}
