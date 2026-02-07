@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taru, Will You Be My Valentine?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="floating-hearts"></div>
+
+  <div class="container bounce-in">
+    <div class="gif_container bob">
+      <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif">
+    </div>
+
+    <h1 class="wiggle">🌸 Taru, will you be my Valentine? 💖 🌸</h1>
+
+    <div class="buttons">
+      <button class="yes-button" onclick="handleYesClick()">Yes 💕</button>
+      <button class="no-button" onclick="handleNoClick()">No 🥺</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<button id="continueBtn" class="continue-btn" onclick="continueJourney()">
+  Continue where you left off 💖
+</button>
+<script>
+  const progress = localStorage.getItem("valentineProgress");
+  const continueBtn = document.getElementById("continueBtn");
+
+  // Show button only if progress exists
+  if (progress) {
+    continueBtn.style.display = "inline-block";
+  }
+
+  function continueJourney() {
+    if (progress === "1") {
+      window.location.href = "rose-day/rose_letter.html";
+    } else if (progress === "2") {
+      window.location.href = "propose-day/propose_letter.html";
+    }
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const bar = document.getElementById("progressBar");
+    const progress = localStorage.getItem("valentineProgress");
+
+    const progressMap = {
+      "1": 14,
+      "2": 28,
+      "3": 42,
+      "4": 57,
+      "5": 71,
+      "6": 85,
+      "7": 100
+    };
+
+    if (progress && progressMap[progress]) {
+      bar.style.width = progressMap[progress] + "%";
+    }
+  });
+</script>
+<p class="progress-text">
+  Your Valentine journey is in progress 💖
+</p>
+
+
+</body>
+<!-- Valentine Progress Bar -->
+<div class="progress-wrapper">
+  <div id="progressBar" class="progress-bar"></div>
+</div>
+
+
+</html>
