@@ -53,4 +53,21 @@ function handleYesClick() {
   }, 700);
 }
 
+<script>
+  const progress = localStorage.getItem("valentineProgress");
+  const continueBtn = document.getElementById("continueBtn");
+
+  // Show button only if progress exists
+  if (progress) {
+    continueBtn.style.display = "inline-block";
+  }
+
+  function continueJourney() {
+    if (progress === "1") {
+      window.location.href = "rose-day/rose_intro.html";
+    } else if (progress === "2") {
+      window.location.href = "propose-day/propose_intro.html";
+    }
+  }
+</script>
 
