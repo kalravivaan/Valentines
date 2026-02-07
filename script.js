@@ -53,9 +53,8 @@ function handleYesClick() {
   }, 700);
 }
 
-<script>
-  const progress = localStorage.getItem("valentineProgress");
-  const continueBtn = document.getElementById("continueBtn");
+const progress = localStorage.getItem("valentineProgress");
+const continueBtn = document.getElementById("continueBtn");
 
   // Show button only if progress exists
   if (progress) {
@@ -69,5 +68,3 @@ function handleYesClick() {
       window.location.href = "propose-day/propose_intro.html";
     }
   }
-</script>
-
