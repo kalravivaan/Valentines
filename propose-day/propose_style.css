@@ -131,3 +131,10 @@ h1 {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 0.9; transform: translateY(0); }
 }
+
+.progress {
+  font-size: 0.9em;
+  color: #e75480;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
