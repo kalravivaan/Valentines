@@ -21,3 +21,7 @@ function unlockRoseDay() {
 function goToLetter() {
   window.location.href = "rose_letter.html";
 }
+
+function goNext() {
+  window.location.href = "../propose-day/propose_unlock.html";
+}
