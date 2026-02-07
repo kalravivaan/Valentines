@@ -37,6 +37,14 @@ body {
   cursor: pointer;
 }
 
+.progress {
+  font-size: 0.9em;
+  color: #e75480;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+
 /* Content */
 .hidden {
   display: none;
@@ -132,3 +140,4 @@ h1 {
 .next-day-button:hover {
   transform: scale(1.08);
 }
+
