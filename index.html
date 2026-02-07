@@ -26,4 +26,17 @@
 
   <script src="script.js"></script>
 </body>
+  <button onclick="continueJourney()">Continue 💖</button>
+
+<script>
+function continueJourney() {
+  const progress = localStorage.getItem("valentineProgress");
+  if (progress === "1") {
+    window.location.href = "rose-day/rose_intro.html";
+  } else if (progress === "2") {
+    window.location.href = "propose-day/propose_intro.html";
+  }
+}
+</script>
+
 </html>
