@@ -6,16 +6,14 @@ function unlockRoseDay() {
   const input = document.getElementById("passwordInput").value.trim();
   const error = document.getElementById("error");
 
-  if (input === ROSE_PASSWORD) {
-    // remember unlock for this session (optional but nice)
-    sessionStorage.setItem("roseUnlocked", "true");
-
-    // go to intro page
+  if (input === "RoseForTvisha") {
+    localStorage.setItem("valentineProgress", "1");
     window.location.href = "rose_intro.html";
   } else {
     error.textContent = "Wrong password 🥺 Try again!";
   }
 }
+
 
 // Called from rose_intro.html
 function goToLetter() {
@@ -25,3 +23,4 @@ function goToLetter() {
 function goNext() {
   window.location.href = "../propose-day/propose_unlock.html";
 }
+
