@@ -23,8 +23,8 @@ function goToLetter() {
 // 💍 Propose Day – The Choice
 
 const CHOICES = [
-  "Always", "Us", "Forever", "Home", "Promise",
-  "Love", "You", "Trust", "Together", "Choose", "Yes"
+  "Forever ♾️", "Home 🏚️", "Future 🔮", "Marriage 💑", "Promise 🤞",
+  "Love 💘", "Trust 💙", "Tviaan 🫶", "Always Together 💫", "Hand-in-Hand 🤝"
 ];
 
 let selected = JSON.parse(localStorage.getItem("proposeChoices")) || [];
