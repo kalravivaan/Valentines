@@ -1,0 +1,137 @@
+/* Chocolate Day CSS (same design system) */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd1dc, #ff9eb5);
+  font-family: 'Baloo 2', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #5a1a32;
+}
+
+.container, .lock-screen {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 520px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(231,84,128,0.35);
+}
+
+h1 { color: #e75480; }
+
+button {
+  background: linear-gradient(135deg, #ff7aa2, #e75480);
+  color: white;
+  font-size: 1.1em;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+  position: relative;
+  z-index: 5;
+}
+
+.ingredient {
+  background: linear-gradient(135deg, #fffaf5, #ffe3ec);
+  color: #5a1a32;
+  padding: 14px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.12),
+    inset 0 -3px 0 rgba(231,84,128,0.2);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.ingredient:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    0 10px 22px rgba(231,84,128,0.35),
+    inset 0 -3px 0 rgba(231,84,128,0.25);
+}
+
+.ingredient:active {
+  transform: scale(0.96);
+}
+
+.ingredient.used {
+  opacity: 0.35;
+  filter: grayscale(60%);
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.sweetness-bar {
+  width: 85%;
+  height: 16px;
+  background: #c89b7b;
+  border-radius: 12px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,0.25),
+    inset 0 -2px 4px rgba(255,255,255,0.2);
+}
+
+/* Chocolate texture */
+#sweetFill {
+  position: relative; /* ✅ VERY IMPORTANT */
+  height: 100%;
+  width: 0%;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #5a3825,
+      #5a3825 8px,
+      #6f452e 8px,
+      #6f452e 16px
+    );
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.3);
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+#sweetFill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  pointer-events: none; /* ✅ CRITICAL */
+}
+
+.hidden { display: none; }
+
+.chocolate-fade {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,215,230,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chocolate-fade.show { opacity: 1; }
