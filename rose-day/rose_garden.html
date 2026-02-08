@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose Garden 🌹</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rose_style.css">
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-wrapper">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+
+  <!-- Bouquet HUD -->
+  <div class="bouquet-hud">
+    <div class="bouquet-icon">💐</div>
+    <div class="bouquet-fill" id="bouquetFill"></div>
+    <div class="bouquet-count" id="roseCount">0 / 11</div>
+  </div>
+
+  <!-- Garden -->
+  <div class="garden" id="garden"></div>
+
+  <button id="backBtn" class="back-btn hidden" onclick="goBackToLetter()">
+    Back to Letter 💌
+  </button>
+
+<button class="reset-btn" onclick="resetRoseGarden()">
+  Reset Garden 🌱
+</button>
+
+  <script src="rose_script.js"></script>
+</body>
+</html>

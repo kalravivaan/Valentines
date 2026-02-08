@@ -132,3 +132,173 @@ h1 {
   to { opacity: 0.9; transform: translateY(0); }
 }
 
+/* 💍 Choice Page */
+
+.choice-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.subtitle {
+  color: #e75480;
+  margin-bottom: 20px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 14px;
+  max-width: 420px;
+  margin: 0 auto 20px;
+}
+
+.choice-card {
+  padding: 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.7);
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.choice-card:hover {
+  transform: scale(1.05);
+}
+
+.choice-card.selected {
+  background: linear-gradient(135deg, #ff9eb5, #e75480);
+  color: white;
+  border-color: #e75480;
+  box-shadow: 0 0 15px rgba(231,84,128,0.6);
+  transform: scale(1.08);
+}
+
+.completion {
+  font-size: 1.3em;
+  color: #e75480;
+  margin: 25px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Buttons */
+
+.action-btn {
+  background: linear-gradient(135deg, #ff7aa2, #e75480);
+  color: white;
+  padding: 10px 26px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.reset-btn {
+  background: none;
+  border: 2px solid #e75480;
+  color: #e75480;
+  padding: 6px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* ❤️ Hearts */
+
+.heart-pop {
+  position: fixed;
+  bottom: 0;
+  font-size: 1.5em;
+  animation: floatUp ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* 🌫️ Fade Overlay */
+
+/* 🌫️ Soft Romantic Fade */
+
+.fade-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 220, 230, 0.55); /* soft pink */
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+.fade-overlay.show {
+  opacity: 1;
+}
+
+.completion,
+.action-btn {
+  position: relative;
+  z-index: 4000;
+}
+
+.completion {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 💌 Letter Page Buttons */
+
+.letter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #ff7aa2, #e75480);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(231, 84, 128, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(231, 84, 128, 0.7);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.85);
+  color: #e75480;
+  border: 2px solid #e75480;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: #ffe3ec;
+  transform: scale(1.03);
+}
